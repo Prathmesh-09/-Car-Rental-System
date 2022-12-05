@@ -1,0 +1,25 @@
+while(rs.next())
+			{
+				int id=rs.getInt("id");
+	%>
+ <tr>
+	<strong><td><center><%=rs.getInt("id")%></center></td>
+	<td><center><%=rs.getString("ename")%></center></td>
+	<td><center><%=rs.getString("emob")%></center></td>
+	<td><center><%=rs.getString("dest")%></center></td>
+	<td><center><%=rs.getString("date")%></center></td>
+	<td><center><%=rs.getString("time")%></center></td>
+	<td><center><%=rs.getString("remark")%></center></td>
+ </tr>
+ <%
+		}
+%>
+-------------------------------------------------------------------------------------------------------
+if(status.equals("Accepted"))
+        { %>
+            <jsp:include page="check2.jsp" >
+                <jsp:param name="desti" value="<%=desti%>"/>
+                <jsp:param name="mob" value="<%=mob%>"/>
+                <jsp:param name="status" value="<%=status%>"/>
+            </jsp:include>
+       <% }
